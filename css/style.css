@@ -1,24 +1,165 @@
-.navbar-brand{
-    margin-top: -15px;
+.visible-lg {
+    display: inline-block!important;
+}
+
+.navbar{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    border-bottom: 0;
+}
+
+.navbar-brand {
     height: 60px;
-    padding-bottom: 0;
+    padding: 2px 15px;
+}
+.navbar-brand img{
+    width: auto;
+    height: 100%;
+    display: inline-block;
+}
+
+.navbar-default .navbar-nav>li>a {
+	padding-top: 20px;
+    padding-bottom: 20px;    
+	transition: all .3s ease;	
+	text-transform: uppercase;
+	color: #0062ba;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+	color: #fff;
+    background-color: #0062ba;    
 }
 
 .logo {
     padding: 10px 10px 0 10px;
   }
   
-.title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
+.title {   
+    font-size: 24px;    
     color: #000;
     padding-top: 15px;
     padding-left: 15px;
 }
+.footer{
+    color: #fff;
+    text-align: center;
+}
 
+.newsletter-form {	
+    margin: 60px auto; 
+    max-width: 700px; 
+}
+
+.newsletter-form p {
+	text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.footer .nav {
+    width: 100%;
+    text-align: center;
+    display:block;
+}
+.footer .nav li {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+.footer .nav li a {
+    color: #909AA0;
+    display: block;
+    padding: 10px;
+}
+.social {   
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+}
+
+.social li {
+    display: inline-block;
+}
+
+.social a {
+    display: block;
+    margin: 5px 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    background-color: #909AA0;
+    font-size: 18px;
+    text-align:center;
+    border-radius: 50%;  
+    transition: all ease 0.3s;  
+}
+
+.social .fa-facebook-f:hover {
+    color: #4060A5;
+}
+
+.social .fa-twitter:hover {
+    color: #00ABE3;
+}
+
+.social .fa-google-plus-g:hover {
+    color: #e64522;
+}
+
+.social .fa-linkedin:hover {
+    color: #0094BC;
+}
+
+.social .fa-instagram:hover {
+    color: #b41184;
+}
+
+.social .fa-envelope:hover {
+    color: #4d4b4b
+}
+
+.social .fa-skype:hover {
+    color: #00C6FF;
+}
+
+.copyright {    
+    color: #909AA0;
+    opacity: .7;
+    margin: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .visible-lg {
+        display: none!important;
+    }
+}
+    
 @media screen and (max-width: 768px) {
     .navbar-brand>img{
         max-height: 55px;
     }
+    .visible-lg {
+        display: none!important;
+    }
+
+    .footer .nav{
+        margin: 0;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .footer .nav {
+        display: none;
+    }
+
+    .newsletter-form {	
+        margin: 30px auto;         
+    }
+   
+}
+
+
