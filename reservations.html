@@ -7,7 +7,8 @@
     <title>Reservations - Brooklyn Festival Film</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">    
     <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">  
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -44,7 +45,7 @@
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
           <div class="panel panel-default">
             <div class="label-1">Book Now!</div>
-            <div class="label-2"></div>
+            <!--<div class="label-2"></div>-->
             <div class="panel-body">
               <form action="">
                 <div class="form-group">
@@ -96,13 +97,13 @@
                       <option value="9">9</option>
                       <option value="10">10</option>
                     </select>
-                </div>
-                <div class="checkbox">
-                  <label for="">
-                    <input type="checkbox"> Send me notifications                    
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>                              
+                </div>               
+                <div class="checkbox">                 
+                    <label>
+                        <input type="checkbox"> Send me notifications        
+                    </label>                
+                </div>             
+                <button type="submit" class="btn btn-default">Submit</button>                        
               </form>
             </div>
           </div>             
@@ -115,17 +116,18 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">                
-          <form class="newsletter-form">   
+            <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
+            method="POST"> 
               <h4>Get Festival Offers and News</h4>                                            
               <div class="input-group input-group-md">                     
-                <input type="text" class="form-control input-lg" placeholder="Enter your email addres">
-                <div class="input-group-btn">
-                  <button class="btn btn-danger btn-lg" type="submit">
-                    Sign Up
-                  </button>
-                </div>
+              <input type="email" name="_replyto" class="form-control input-lg" placeholder="Enter your email addres">
+              <div class="input-group-btn">
+                <button class="btn btn-danger btn-lg" type="submit" value="Send">
+                Sign Up
+                </button>
+              </div>
               </div>                  
-          </form>
+            </form>
         </div>
       </div>
      <div class="row">
@@ -161,5 +163,41 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(window).resize(function() {
+      if ($(window).width() < 480) {
+          $("input").removeClass("input-lg");
+          $("button").removeClass("btn-lg");
+  
+          $("input").addClass("input-sm");
+          $("button").addClass("btn-sm");
+      }
+      else {
+          $("input").removeClass("input-sm");
+          $("button").removeClass("btn-sm");
+  
+          $("input").addClass("input-lg");
+          $("button").addClass("btn-lg");
+          }
+          });
+  
+          $(window).load(function() {
+      if ($(window).width() < 480) {
+          $("input").removeClass("input-lg");
+          $("button").removeClass("btn-lg");
+  
+          $("input").addClass("input-sm");
+          $("button").addClass("btn-sm");
+      }
+      else {
+          $("input").removeClass("input-sm");
+          $("button").removeClass("btn-sm");
+  
+          $("input").addClass("input-lg");
+          $("button").addClass("btn-lg");
+          }
+          });
+    </script>
 </body>
 </html>
