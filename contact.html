@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact - Brooklyn Festival Film</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,8 +41,8 @@
      
   </nav>
 
-  <main>
-    <section>
+  <main class="contact-page">
+    <section style="margin-bottom:30px">           
         <iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3220933706393!2d-73.96311144882884!3d40.71092544551645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bdfc7334d03%3A0xfdf1fa23751a4b91!2sBrooklyn+Film+Festival!5e0!3m2!1sen!2sus!4v1521171634664"
 				width="100%"
@@ -49,36 +50,106 @@
 				frameborder="0"
 				style="border:0"
 				allowfullscreen
-			></iframe>
+      ></iframe>   
     </section>
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <form action="" class="contactform">
-              
-            </form>
+          <div class="col-sm-6 col-md-4" style="background-color:#ddd);">
+            <div class="contact-info">             
+              <div class="logo">
+                 <img src="img/logo-c.png" alt="Brooklyn Film Festival">
+               </div>                            
+               <ul>                
+                  <i class="far fa-square right-top"></i>     
+                  <i class="far fa-square left-middle"></i>                             
+                 <li>
+                   <p>
+                     <strong>Phone: </strong>
+                      + 1 (718) 388 4306
+                   </p>
+                 </li>                
+                 <li>                   
+                   <p>                                            
+                     <strong>Email: </strong>
+                     <a class="email-address" href="mailto: festival@wbff.org">Festival@Wbff.org </a> 
+                     <i class="far fa-square right-middle"></i>                    
+                   </p>
+                      
+                 </li>
+                 <li>
+                   <p>
+                     180 S 4th St<br>
+                     Brooklyn, NY 11211
+                   </p>
+                 </li>
+                 
+                 <i class="far fa-square right-bottom"></i>
+               </ul>                   
+               <h1>Follow Us</h1>     
+               <div class="social-icons">
+                  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a>                  
+               </div>     
+             </div>
           </div>
-          <div class="col-md-4"></div>
-        </div>
-      </div>
+          <div class="col-sm-6 col-md-8">
+            <div class="panel panel-default contact-panel">             
+              <div class="panel-body">
+                <form action="https://formspree.io/gordana@nikolic.si" method="POST">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Full name">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="_replyto"class="form-control" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                      <input type="tel" name="phone" class="form-control" placeholder="Phone">
+                    </div>
+                  <div class="form-group">
+                    <select name="question" class="form-control" contact-message>
+                        <option value="" selected disabled>Subject</option>
+                        <option value="general">General Inquiries</option>
+                        <option value="film-submission">Film Submission Inquiries</option>
+                        <option value="press">Press Inquiries</option>
+                        <option value="registration">Registration</option>
+                        <option value="film-industry">Film Industry Inquiries</option>
+                        <option value="sponsorship">Sponsorship Opportunities</option>
+                        <option value="volunteering">Volunteering</option>
+                        <option value="kids-film">Kids Film Festival</option>                        
+                    </select>                  
+                  </div>
+                  <div class="form-group">
+                    <textarea name="message" class="form-control" rows="5" placeholder="Message"></textarea>
+                  </div>                                   
+                  <button type="submit" value="Send" class="btn btn-default">Submit</button>                
+                </form>
+              </div>
+            </div>  
+          </div>          
+        </div>         
+      </div>     
     </section>
   </main>
       
-  <footer class= "navbar-inverse">      
+  <footer class= "navbar-inverse contact-footer">      
     <div class="container">
       <div class="row">
         <div class="col-xs-12">                
-          <form class="newsletter-form">   
-              <h4>Get Festival Offers and News</h4>                                            
-              <div class="input-group input-group-md">                     
-                <input type="text" class="form-control input-lg" placeholder="Enter your email addres">
-                <div class="input-group-btn">
-                  <button class="btn btn-danger btn-lg" type="submit">
-                    Sign Up
-                  </button>
-                </div>
-              </div>                  
+          <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
+          method="POST"> 
+            <h4>Get Festival Offers and News</h4>                                            
+            <div class="input-group input-group-md">                     
+            <input type="email" name="_replyto" class="form-control input-lg" placeholder="Enter your email addres">
+            <div class="input-group-btn">
+              <button class="btn btn-danger btn-lg" type="submit" value="Send">
+              Sign Up
+              </button>
+            </div>
+            </div>                  
           </form>
         </div>
       </div>
@@ -116,5 +187,41 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(window).resize(function() {
+      if ($(window).width() < 480) {
+          $("input").removeClass("input-lg");
+          $("button").removeClass("btn-lg");
+  
+          $("input").addClass("input-sm");
+          $("button").addClass("btn-sm");
+      }
+      else {
+          $("input").removeClass("input-sm");
+          $("button").removeClass("btn-sm");
+  
+          $("input").addClass("input-lg");
+          $("button").addClass("btn-lg");
+          }
+          });
+  
+          $(window).load(function() {
+      if ($(window).width() < 480) {
+          $("input").removeClass("input-lg");
+          $("button").removeClass("btn-lg");
+  
+          $("input").addClass("input-sm");
+          $("button").addClass("btn-sm");
+      }
+      else {
+          $("input").removeClass("input-sm");
+          $("button").removeClass("btn-sm");
+  
+          $("input").addClass("input-lg");
+          $("button").addClass("btn-lg");
+          }
+          });
+    </script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 /*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');*/
 
 body {
-	padding-top: 60px;
-}
+    padding-top: 60px;
+  }
 body.home {
 	padding-top: 80px;
 }
@@ -54,6 +54,7 @@ body.home {
 footer{
     color: #fff;
     text-align: center;
+    margin-top: 30px;
 }
 
 .newsletter-form {	
@@ -314,16 +315,16 @@ footer .nav li a {
     background: rgba(0,0,0,0.5);
     color: #ffff;
     margin-top: 50px;
-    position: relative;    
+    /*position: relative;   */
     transition: 1s;      
 }
 .booking .panel:hover{
     background: rgba(0,0,0,0.7);
 }
 .booking .panel-body{
-    padding: 70px 30px 30px 30px;
+    padding: 40px 30px 30px 30px;
 }
-.label-1{
+/*.label-1{
     position: absolute;
     top: 5px;
     left: -5px;
@@ -334,9 +335,32 @@ footer .nav li a {
     background: #FF322B;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     z-index: 2;
+}*/
+.label-1{
+    position: relative;
+    display: inline-block;
+    top: 10px;   
+    left: -5px;
+    line-height: 25px;
+    padding: 5px 20px;    
+    color: #fff;
+    transform: rotate(-20deg);
+    background: #FF322B;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);   
 }
-.label-2{
-    position: absolute;
+.label-1:after{
+    position:absolute;    
+    content:"";
+    top:-10px;
+    left:5px;
+    width:100%;
+    height:100%;
+    transform: rotate(-10deg);
+    background: rgba(230, 169, 101, 0.5);  
+    z-index: -100;
+}
+/*.label-2{
+    position: absolute;   
     top: -4px;
     left: -4px;
     line-height: 25px;
@@ -346,11 +370,15 @@ footer .nav li a {
     transform: rotate(-28deg);
     background: rgba(230, 169, 101, 0.5);    
     z-index: 1;
-}
+}*/
 .booking .btn{
     border:0;
     background: #FF322B;
     color: #fff;   
+}
+.booking .btn:hover{   
+    background: #c40b04;
+    
 }
 .image-box{ 
     position: relative;
@@ -361,7 +389,129 @@ footer .nav li a {
    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);   
 }
 
- @media screen and (max-width: 992px) {
+.contact-info {
+    background-color: #fff;
+    color: #fff;   
+    padding: 10px 40px 30px 40px;
+    margin-bottom: 30px;
+   /* border-radius: 20px;*/
+    text-align: center;    
+}
+.contact-info .logo {
+    max-width: 50%;   
+    margin: 0 auto;    
+    padding-bottom:5px;
+    position: absolute;
+    top:40px;
+    left: 25%;
+   /* background-color: #ddd;  */
+   background-color: #fff;
+}
+.contact-info .logo img{    
+    max-width:100%;   
+    display:inline-block;   
+}
+
+.contact-info ul {   
+    
+    background-color: #0062ba;
+    border: 0px solid #ddd;
+    padding: 70px 20px 20px;
+    margin: 30px 0 30px 0;
+    list-style: none;
+    text-align: left;   
+}
+.email-address{   
+    color:#fff;
+}
+.contact-info a{
+    text-decoration: none;  
+}
+.contact-info h1 {
+    color: #0062ba;
+    font-size: 28px;    
+    font-weight: 700;   
+    margin-bottom: 20px;
+}
+.contact-info .social-icons a{     
+
+    color: #9aa4b9;    
+    display: inline-block;   
+    font-size: 20px;
+    margin-right: 6px;    
+    transition: all .3s ease;
+}
+.contact-info .social-icons a:hover{
+     transform: scale(1.3); 
+}
+.contact-info ul::before, .contact-info ul::after{
+    font-family: Font Awesome\ 5 Free;
+    content: "\f0c8";
+    line-height: 22px;
+    font-size: 28px;
+    font-weight: 900;  
+    position: relative;
+    display: inline-block;
+  
+}
+/*left-top*/
+.contact-info ul:before{
+    top: -50px;
+    left: -12px;
+}
+/*left-bottom*/
+.contact-info ul:after{
+    top: 10px;
+    left: -40px;
+}
+
+.right-top, .right-bottom, .right-middle{
+    line-height: 22px;
+    font-size: 28px;
+    font-weight: 900;  
+    position: relative;   
+    /*background-color: #fff;*/   
+}
+
+.right-top{
+    top: -50px;
+    left: 198px;
+}
+
+.right-bottom{
+    top: 10px;
+    left: 225px;
+}
+
+.right-middle{
+    top: -5px;
+    left: 60px;
+}
+
+.left-middle{
+    display:none;
+}
+.contact-panel{
+    background-color: #efeeec;
+    border:none;
+}
+
+.contact-page{    
+    background-color:#efeeec;
+}
+
+.contact-panel .btn{
+    background: #0062ba;
+    color: #fff;
+    border: none;
+}
+.contact-panel .btn:hover{
+    background: #1e558b;   
+}
+.contact-footer{
+    margin-top:0;
+}
+@media screen and (max-width: 992px) {
     .visible-lg {
         display: none !important;
     }
@@ -376,7 +526,8 @@ footer .nav li a {
     .image-box img{       
         display:inline-block;
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);   
-    }
+    }    
+   
 }
 @media screen and (max-width: 768px) {
    
@@ -392,10 +543,8 @@ footer .nav li a {
      }
      .schedule{
          top:0;
-     } 
-    
+     }    
 }
-
 @media screen and (max-width: 480px) {
    
     footer .nav {
@@ -425,8 +574,382 @@ footer .nav li a {
     }   
    .year{
        display:none;
-   }
+   }  
 }
+
+/*@media screen-s for contact form data*/
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle{
+        line-height: 14px;
+        font-size: 18px;
+    }
+    .contact-info ul::before{
+        left:-15px;
+    }
+    .contact-info ul:after{
+        left: -35px;
+    }
+    .right-top{
+        left:152px;
+    }
+    .right-middle{
+        top: -20px;
+        left: 173px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 173px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle{
+        line-height: 14px;
+        font-size: 18px;
+    }
+    .contact-info ul::before{
+        left:-10px;
+    }
+
+    .contact-info ul::after{
+        left:-30px;
+    }
+
+    .right-top{
+        left:200px;
+    }
+    .right-middle{ 
+        top: 0;     
+        left: 56px;
+    }
+    .right-bottom{    
+        left: 220px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width:681px){   
+    .contact-info ul{
+        padding-top: 90px;
+        padding-left: 80px;         
+    }  
+   
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle {
+       position: relative;
+       line-height: 26px;
+       font-size: 34px;
+       background-color:#fff;
+   } 
+ 
+   .contact-info ul::before{
+       left:-55px;
+   }
+   .contact-info ul::after{
+       left:-90px;
+   }
+   .left-middle{ 
+    display:inline-block;
+    top: 50px;     
+    left:-123px;
+    }   
+   .right-top{          
+       left:415px;      
+   }
+   .right-middle{ 
+       top: -10px;     
+       left: 286px;
+   }
+  
+   .right-bottom{    
+       left: 453px;
+   }
+   
+}
+@media screen and (max-width: 680px) and (min-width: 610px) {
+    .right-top{          
+        left:415px;      
+    }
+    .right-middle{              
+        left: 280px;
+    }   
+    .right-bottom{    
+        left: 445px;
+    }
+}
+@media screen and (max-width: 609px) and (min-width: 545px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 22px;
+        font-size: 26px;
+    }  
+    
+    .right-top{          
+        left:360px;      
+    }
+    .right-middle{              
+        left: 223px;
+    }
+  
+    .right-bottom{    
+        left: 388px;
+    }
+    .contact-info ul:after{
+        top: 10px;
+        left: -15px;
+    }
+    .contact-info ul:before{
+       
+        left: 15px;
+    }
+  
+}
+@media screen and (max-width: 544px) and (min-width: 500px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 22px;
+        font-size: 26px;
+    }      
+    .right-top{          
+        left:315px;      
+    }
+    .right-middle{              
+        left: 178px;
+    }   
+    .right-bottom{    
+        left: 341px;
+    }
+    .contact-info ul:after{
+        top: 10px;
+        left: -15px;
+    }
+    .contact-info ul:before{
+       
+        left: 10px;
+    }
+  
+}
+@media screen and (max-width: 499px) and (min-width: 451px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }      
+    .right-top{          
+        left:283px;      
+    }
+    .right-middle{              
+        left: 138px;
+    }   
+    .right-bottom{    
+        left: 303px;
+    }
+    .contact-info ul:after{
+        top: 10px;
+        left: -13px;
+    }
+    .contact-info ul:before{       
+        left: 8px;
+    }
+}
+
+
+@media screen and (max-width: 450px) and (min-width: 420px) {
+   
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }      
+    .contact-info ul::before{
+        left:0;
+    }
+    .contact-info ul:after{
+        left: -20px;
+    }
+    .right-top{
+        left:250px;
+    }
+    .right-middle{
+        top: -20px;
+        left: 105px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 270px;
+    }
+}
+@media screen and (max-width: 419px) and (min-width: 395px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }      
+    .contact-info ul::before{
+        left:-5px;
+    }
+    .contact-info ul:after{
+        left: -23px;
+    }
+    .right-top{
+        left:223px;
+    }
+    .right-middle{
+        top: -20px;
+        left: 78px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 244px;
+    }
+}
+@media screen and (max-width: 394px) and (min-width: 380px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }         
+    .contact-info ul::before{
+        left:-8px;
+    }
+    .contact-info ul:after{
+        left: -25px;
+    }
+    .right-top{
+        left:205px;
+    }
+    .right-middle{
+        top: -10px;
+        left: 61px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 226px;
+    }
+}
+@media screen and (max-width: 379px) and (min-width: 360px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }  
+    .contact-info ul::before{
+        left:-8px;
+    }
+    .contact-info ul:after{
+        left: -27px;
+    }       
+    .right-top{
+        left:191px;
+    }
+    .right-middle{
+        top: -10px;
+        left: 47px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 211px;
+    }
+}
+@media screen and (max-width: 359px) and (min-width: 345px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }  
+    .contact-info ul::before{
+        left:-10px;
+    }
+    .contact-info ul:after{
+        left: -29px;
+    }       
+    .right-top{
+        left:177px;
+    }
+    .right-middle{
+        top: -10px;
+        left: 32px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 197px;
+    }
+}
+@media screen and (max-width: 344px) and (min-width: 335px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
+    }
+        .contact-info ul::before{
+            left:-10px;
+        }
+        .contact-info ul::after{
+            left: -27px;
+        }       
+        .right-top{
+            left:165px;
+        }
+        .right-middle{
+            top: -10px;
+            left: 20px;
+        }
+        .right-bottom{
+            top: 10px;
+            left: 185px;
+        }
+    }  
+
+    @media screen and (max-width: 334px) and (min-width: 331px) {
+        .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+            line-height: 14px;
+            font-size: 18px;
+        }
+            .contact-info ul::before{
+                left: -13px;
+            }
+            .contact-info ul::after{
+                left: -30px;
+            }       
+            .right-top{
+                left:160px;
+            }
+            .right-middle{
+                top: -10px;
+                left: 15px;
+            }
+            .right-bottom{
+                top: 10px;
+                left: 180px;
+            }
+        }  
+@media screen and (max-width: 330px) and (min-width: 323px) {
+        .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{ 
+            display:none;
+        }
+      
+    }
+
+@media screen and (max-width: 322px) and (min-width: 319px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle{       
+        line-height: 14px;
+        font-size: 18px;
+    }
+    .contact-info ul::before{
+        left: -15px;
+    }
+    .contact-info ul::after{
+        left: -35px;
+    }       
+    .right-top{
+        left:150px;
+    }
+    .right-middle{
+        top: -30px;
+        left: 170px;
+    }
+    .right-bottom{
+        top: 10px;
+        left: 170px;
+    }
+    
+}
+@media screen and (max-width: 318px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{ 
+        display:none;
+    }
+}
+
 
 
 

@@ -7,8 +7,7 @@
     <title>Schedule - Brooklyn Festival Film</title>   
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -1150,16 +1149,17 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">                
-          <form class="newsletter-form">   
-              <h4>Get Festival Offers and News</h4>                                            
-              <div class="input-group input-group-md">                     
-                <input type="text" class="form-control input-lg" placeholder="Enter your email addres">
-                <div class="input-group-btn">
-                  <button class="btn btn-danger btn-lg" type="submit">
-                    Sign Up
-                  </button>
-                </div>
-              </div>                  
+          <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
+          method="POST"> 
+            <h4>Get Festival Offers and News</h4>                                            
+            <div class="input-group input-group-md">                     
+            <input type="email" name="_replyto" class="form-control input-lg" placeholder="Enter your email addres">
+            <div class="input-group-btn">
+              <button class="btn btn-danger btn-lg" type="submit" value="Send">
+              Sign Up
+              </button>
+            </div>
+            </div>                  
           </form>
         </div>
       </div>
@@ -1193,10 +1193,45 @@
         </div>
       </div>      
  </footer>  
-
     
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+    <script>
+        $(window).resize(function() {
+      if ($(window).width() < 480) {
+          $("input").removeClass("input-lg");
+          $("button").removeClass("btn-lg");
+  
+          $("input").addClass("input-sm");
+          $("button").addClass("btn-sm");
+      }
+      else {
+          $("input").removeClass("input-sm");
+          $("button").removeClass("btn-sm");
+  
+          $("input").addClass("input-lg");
+          $("button").addClass("btn-lg");
+          }
+          });
+  
+          $(window).load(function() {
+      if ($(window).width() < 480) {
+          $("input").removeClass("input-lg");
+          $("button").removeClass("btn-lg");
+  
+          $("input").addClass("input-sm");
+          $("button").addClass("btn-sm");
+      }
+      else {
+          $("input").removeClass("input-sm");
+          $("button").removeClass("btn-sm");
+  
+          $("input").addClass("input-lg");
+          $("button").addClass("btn-lg");
+          }
+          });
+    </script>
 </body>
 </html>
