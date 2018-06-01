@@ -11,7 +11,7 @@ body.home {
 }
 
 .navbar{
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     border-bottom: 0;
 }
@@ -54,7 +54,7 @@ body.home {
 footer{
     color: #fff;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .newsletter-form {	
@@ -68,8 +68,8 @@ footer{
 }
 footer .nav {
     width: 100%;
-    text-align: center;
-    display:block;
+    text-align: left;
+    /*display:block;*/
 }
 footer .nav li {
     display: inline-block;
@@ -78,7 +78,7 @@ footer .nav li {
 }
 footer .nav li a {
     color: #909AA0;
-    display: block;
+   /* display: block;*/
     padding: 10px;
 }
 .social {   
@@ -115,24 +115,12 @@ footer .nav li a {
     background: #00ABE3;
 }
 
-.social .fa-google-plus-g:hover {
-    background: #e64522;
-}
-
-.social .fa-linkedin:hover {
-    background: #0094BC;
-}
-
 .social .fa-instagram:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
-.social .fa-envelope:hover {
-    background: #4d4b4b
-}
 
-.social .fa-skype:hover {
-    background: #00C6FF;
+
 }
 
 .copyright {    
@@ -162,7 +150,9 @@ footer .nav li a {
     font-weight: 700;
     text-transform: uppercase;
 }
-
+.carousel-caption .mobile-button{
+    display: none;
+}   
 .carousel .carousel-control {
     opacity: 1
   }
@@ -310,11 +300,13 @@ footer .nav li a {
     background: url('../img/festival.jpg') no-repeat center center;
     background-size: cover;   
 }
+
 .booking .panel{
+    max-width: 500px;
+    margin: 50px auto 30px auto;
     border:0;     
     background: rgba(0,0,0,0.5);
     color: #ffff;
-    margin-top: 50px;
     /*position: relative;   */
     transition: 1s;      
 }
@@ -345,7 +337,6 @@ footer .nav li a {
     padding: 5px 20px;    
     color: #fff;
     transform: rotate(-20deg);
-    background: #FF322B;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);   
 }
 .label-1:after{
@@ -357,20 +348,19 @@ footer .nav li a {
     height:100%;
     transform: rotate(-10deg);
     background: rgba(230, 169, 101, 0.5);  
-    z-index: -100;
+    z-index: -2;
 }
-/*.label-2{
-    position: absolute;   
-    top: -4px;
-    left: -4px;
-    line-height: 25px;
-    width: 110px;
-    height: 35px;   
-    color: #fff;
-    transform: rotate(-28deg);
-    background: rgba(230, 169, 101, 0.5);    
-    z-index: 1;
-}*/
+.label-1:before{
+    position:absolute;    
+    content:"";
+    top: 0;
+    left:5px;
+    width:100%;
+    height:100%;
+    background: #FF322B;
+    z-index: -1;
+}
+
 .booking .btn{
     border:0;
     background: #FF322B;
@@ -508,19 +498,39 @@ footer .nav li a {
 .contact-panel .btn:hover{
     background: #1e558b;   
 }
-.contact-footer{
+
+.panel select:invalid{
+    color: #999;
+   
+}
+.panel select option{
+    color: #555;
+ }
+.contact footer{
     margin-top:0;
 }
+input[type=checkbox] {
+    margin: 4px 0 0 -20px !important;
+    height: unset !important;
+}
+
+
 @media screen and (max-width: 992px) {
     .visible-lg {
         display: none !important;
     }
-    
+
     .carousel-caption{                   
         bottom: 10px;
      }
      .carousel-caption h1, a, p{
         margin-bottom: 10px;
+    }
+
+    .image-box {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 40px;
     }
    
     .image-box img{       
@@ -534,7 +544,9 @@ footer .nav li a {
     .visible-lg {
         display: none !important;
     }  
-   
+    .footer-margin footer{
+        margin-top: 0px;
+    }
     footer .nav{
         margin: 0;
     }    
@@ -569,8 +581,11 @@ footer .nav li a {
         margin-bottom: 20px;
         font-size: 28px;
     }
-    .carousel-caption p{
+    .carousel-caption p, .main-button{
         display: none;
+    }
+    .carousel-caption .mobile-button{
+        display: inline-block;
     }   
    .year{
        display:none;
