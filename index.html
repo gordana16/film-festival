@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     
 </head>
-<body class="home">
-
+<body id="home">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">          
           <div class="navbar-header">
@@ -61,7 +60,7 @@
               <div class="carousel-caption text-left">  
                 <h1>Rampage</h1>                  
                 <p> <strong>Screenplay:</strong>    
-                    Ryan Engle, Ryan Condal, Carlton Cuse </p>                              
+                    Ryan Engle, Carlton Cuse </p>                              
                 <p> <strong>Director: </strong>Brad Peyton</p>          
                 <p> <strong>Writer: </strong>Adam Sztykiel</p>               
                 <a class="btn btn-default main-button" href="schedule.html">Take me there <i class="fas fa-angle-right"></i></a> 
@@ -77,7 +76,8 @@
                     Hans Rodionoff, Jessica Scott</p>                              
                   <p> <strong>Director: </strong>Darin Scott</p>          
                   <p> <strong>Writer: </strong>Hans Rodionoff</p>                  
-                  <a class="btn btn-default" href="#">Take me there <i class="fas fa-angle-right"></i></a>
+                  <a class="btn btn-default main-button" href="schedule.html">Take me there <i class="fas fa-angle-right"></i></a>
+                  <a class="btn btn-default mobile-button" href="schedule.html">More info <i class="fas fa-angle-right"></i></a>    
                   </div>            
               </div>
               <div class="item">
@@ -88,7 +88,8 @@
                   <p> <strong>Screenplay: </strong> Jaime Anduiza, Jessica Scott</p>                   
                   <p> <strong>Director: </strong>Sergio G. Sánchez</p>      
                   <p> <strong>Writer: </strong>Cristina Sánchez Belmonte</p>                  
-                  <a class="btn btn-default" href="#">Take me there <i class="fas fa-angle-right"></i></a>
+                  <a class="btn btn-default main-button" href="schedule.html">Take me there <i class="fas fa-angle-right"></i></a>
+                  <a class="btn btn-default mobile-button" href="schedule.html">More info <i class="fas fa-angle-right"></i></a>    
                 </div>     
               </div>
               <div class="item">
@@ -100,7 +101,8 @@
                     Jonas Chernick, Michael Xavier</p>                              
                   <p> <strong>Director: </strong>Jon Evan Cohen</p>      
                   <p> <strong>Writer: </strong>Jon Evan Cohen, Nicola Sammeroff</p>                   
-                  <a class="btn btn-default" href="#">Take me there <i class="fas fa-angle-right"></i></a>
+                  <a class="btn btn-default main-button" href="schedule.html">Take me there <i class="fas fa-angle-right"></i></a>
+                  <a class="btn btn-default mobile-button" href="schedule.html">More info <i class="fas fa-angle-right"></i></a>    
                 </div>     
               </div>
             </div>
@@ -141,7 +143,6 @@
 </section>
 </div>
 
-
 <footer class="navbar-inverse"> 
    <div class="ft-top">
         <div class="container-fluid ft-top">
@@ -150,10 +151,10 @@
               <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
               method="POST"> 
                 <h4>Get Festival Offers and News</h4>                                            
-                <div class="input-group  input-group-lg">                     
-                <input type="email" name="_replyto" class="form-control input-lg" placeholder="Enter your email addres">
+                <div class="input-group input-group-lg">                     
+                <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
                 <div class="input-group-btn">
-                  <button class="btn btn-default btn-lg" type="submit" value="Send">
+                  <button class="btn btn-default" type="submit" value="Send">
                   Sign Up
                   </button>
                 </div>
@@ -183,11 +184,11 @@
      <div class="row">
        <div class="col-xs-12">           
           <ul class="nav navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#rsvp">Reservations</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -218,42 +219,30 @@
 
   <script>
     $(window).resize(function() {
-  if ($(window).width() < 480) {
-      $("input").removeClass("input-lg");
-      $("button").removeClass("btn-lg");
+      if ($(window).width() < 480) {    
+          $(".newsletter-form .input-group").removeClass("input-group-lg");  
+          $(".newsletter-form .input-group").addClass("input-group-sm");     
+        }
+        else {
+          $(".newsletter-form .input-group").removeClass("input-group-sm");  
+          $(".newsletter-form .input-group").addClass("input-group-lg");
+        }
+        });
 
-      $("input").addClass("input-sm");
-      $("button").addClass("btn-sm");
-  }
-  else {
-      $("input").removeClass("input-sm");
-      $("button").removeClass("btn-sm");
-
-      $("input").addClass("input-lg");
-      $("button").addClass("btn-lg");
-      }
-      });
-
-      $(window).load(function() {
-  if ($(window).width() < 480) {
-      $("input").removeClass("input-lg");
-      $("button").removeClass("btn-lg");
-
-      $("input").addClass("input-sm");
-      $("button").addClass("btn-sm");
-  }
-  else {
-      $("input").removeClass("input-sm");
-      $("button").removeClass("btn-sm");
-
-      $("input").addClass("input-lg");
-      $("button").addClass("btn-lg");
-      }
-      });
+    $(window).load(function() {
+        if ($(window).width() < 480) {
+          $(".newsletter-form .input-group").removeClass("input-group-lg");
+          $(".newsletter-form .input-group").addClass("input-group-sm");
+        }
+        else {
+          $(".newsletter-form .input-group").removeClass("input-group-sm");
+          $(".newsletter-form .input-group").addClass("input-group-lg");
+        }
+        });
   </script>
   <script>
     $(".countdown").TimeCircles({ time: {
-      Days: { color: "#ff4c50" },
+      Days: { color: "#e7484b" },
       Hours: { color: "#8ecdf2" },
       Minutes: { color: "#f2968e" },      
       Seconds: { color: " #0062ba" }
