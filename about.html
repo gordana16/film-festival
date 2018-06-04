@@ -10,8 +10,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body id="about" class="footer-margin">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">          
       <div class="navbar-header">
@@ -39,49 +39,79 @@
     </div>   
      
   </nav>    
- <main>
-   <div class="container">
-     <div class="row">
-       <div class="col-md-6 col-xs-12">
-          <div class="page-header">
-              <h2>About Festival</h2>
-           </div>
-          <p>The Brooklyn Outdoor Film Festival (BOFF), is an International, competitive festival. BFF mission is to provide a public forum in Brooklyn in order to advance public interest in films and the independent production of films. To draw worldwide attention to Brooklyn as a center for cinema. To encourage the rights of all Brooklyn residents to access and experience the power of independent filmmaking, and to promote artistic excellence and the creative freedom of artists without censure. BFF, inc. is a not-for-profit organization.</p>
-       </div>
-       <div class="col-md-6 col-xs-12">
-         <div class="image-box">
-          <img class="img-responsive" src="img/about.jpg" alt="">
-         </div>
-       </div>
-     </div>
-   </div> 
- </main>     
-  <footer class= "navbar-inverse">      
+  <main>
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">                
+      <div class="row">  
+        <div class="col-sm-6 pull-right hidden-xs">
+          <div class="image-box">
+            <img class="img-responsive" src="img/about.jpg" alt="">
+          </div>
+        </div>                                 
+        <div class="col-sm-6">                  
+            <div class="page-header">
+                <h2>About the Festival</h2>
+            </div>  
+          </div> 
+           <div class="col-sm-6 about-text-xs visible-xs">
+            <p>Twenty years ago to the day, we decided that what Brooklynn really needed was a good film festival. Unfortunately, it didn't have one and nobody thought about making one ... until now! This year marks the beginning of a new era: the first annual Brooklynn Outdoor Film Festival. This is a festival for those who love the comfort of lawn chairs and the open air. It's an event for people who like sharing their popcorn with the local squirrels. Bring your kids, bring your dog, bring your cat (if you're into that) and sit down for an evening of fine cinema history.</p>           
+            <p>Over the last couple of decades, the masterminds behind this event have thought long and hard about what kind of films a film festival truly needs in order to be the greatest it can be. The result of this great intellectual effort is a list of movies so stupefyingly brillant we're sure that you will wet your pants with excitement at the mere prospect of spending an entire week basking in their flawless execution and unprecedented production values. Every night of the festival we'll be showing three of the finest movies ever to have graced the planet. Go on over to our list of films to have a look at what we have to offer!</p>         
+          </div>               
+           <div class="about-text hidden-xs">
+            <p>Twenty years ago to the day, we decided that what Brooklynn really needed was a good film festival. Unfortunately, it didn't have one and nobody thought about making one ... until now! This year marks the beginning of a new era: the first annual Brooklynn Outdoor Film Festival. This is a festival for those who love the comfort of lawn chairs and the open air. It's an event for people who like sharing their popcorn with the local squirrels. Bring your kids, bring your dog, bring your cat (if you're into that) and sit down for an evening of fine cinema history.</p>           
+            <p>Over the last couple of decades, the masterminds behind this event have thought long and hard about what kind of films a film festival truly needs in order to be the greatest it can be. The result of this great intellectual effort is a list of movies so stupefyingly brillant we're sure that you will wet your pants with excitement at the mere prospect of spending an entire week basking in their flawless execution and unprecedented production values. Every night of the festival we'll be showing three of the finest movies ever to have graced the planet. Go on over to our list of films to have a look at what we have to offer!</p>         
+          </div>
+          <div class="col-sm-6 visible-xs">
+              <div class="image-box">
+                <img class="img-responsive" src="img/about.jpg" alt="">
+              </div>
+            </div>                  
+      </div>
+    </div> 
+  </main>   
+
+  <footer class="navbar-inverse">  
+    <div class="container-fluid ft-top">
+      <div class="row news">
+        <div class="col-sm-8">
           <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
           method="POST"> 
             <h4>Get Festival Offers and News</h4>                                            
-            <div class="input-group input-group-md">                     
-            <input type="email" name="_replyto" class="form-control input-lg" placeholder="Enter your email addres">
+            <div class="input-group input-group-lg">                     
+            <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
             <div class="input-group-btn">
-              <button class="btn btn-danger btn-lg" type="submit" value="Send">
+              <button class="btn btn-default" type="submit" value="Send">
               Sign Up
               </button>
             </div>
             </div>                  
           </form>
         </div>
-      </div>
-     <div class="row">
-       <div class="col-xs-12">           
+        <div class="col-sm-4">
+          <div class="brooklyn-links">
+            <h4>Find out more</h4>
+              <ul>
+                <li>
+                <a href="https://www.brooklynpaper.com/">Brooklyn's News <i class="fas fa-angle-right"></i>
+                </a>
+                </li>
+              <li>
+                <a href="https://www.brooklynbridgepark.org/">Brooklyin Bridge Park <i class="fas fa-angle-right"></i>
+                </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+      </div> 
+    </div>  
+    <div class="container ft-bottom">      
+      <div class="row">
+        <div class="col-xs-12">           
           <ul class="nav navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#rsvp">Reservations</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -102,46 +132,34 @@
             <p class="copyright">&copy; 2018 Brooklyn Outdoor Film Festival.</p>
           </div>
         </div>
-      </div>      
- </footer>   
+    </div>     
+  </footer>
 
     
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(window).resize(function() {
-      if ($(window).width() < 480) {
-          $("input").removeClass("input-lg");
-          $("button").removeClass("btn-lg");
-  
-          $("input").addClass("input-sm");
-          $("button").addClass("btn-sm");
-      }
-      else {
-          $("input").removeClass("input-sm");
-          $("button").removeClass("btn-sm");
-  
-          $("input").addClass("input-lg");
-          $("button").addClass("btn-lg");
-          }
-          });
-  
-          $(window).load(function() {
-      if ($(window).width() < 480) {
-          $("input").removeClass("input-lg");
-          $("button").removeClass("btn-lg");
-  
-          $("input").addClass("input-sm");
-          $("button").addClass("btn-sm");
-      }
-      else {
-          $("input").removeClass("input-sm");
-          $("button").removeClass("btn-sm");
-  
-          $("input").addClass("input-lg");
-          $("button").addClass("btn-lg");
-          }
-          });
-    </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(window).resize(function() {
+      if ($(window).width() < 480) {    
+          $(".newsletter-form .input-group").removeClass("input-group-lg");  
+          $(".newsletter-form .input-group").addClass("input-group-sm");     
+        }
+        else {
+          $(".newsletter-form .input-group").removeClass("input-group-sm");  
+          $(".newsletter-form .input-group").addClass("input-group-lg");
+        }
+        });
+
+    $(window).load(function() {
+        if ($(window).width() < 480) {
+          $(".newsletter-form .input-group").removeClass("input-group-lg");
+          $(".newsletter-form .input-group").addClass("input-group-sm");
+        }
+        else {
+          $(".newsletter-form .input-group").removeClass("input-group-sm");
+          $(".newsletter-form .input-group").addClass("input-group-lg");
+        }
+        });
+   </script>
 </body>
 </html>
