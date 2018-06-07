@@ -35,8 +35,9 @@ body {
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
 	color: #fff;
-    background-color: #0061b7;    
+    background-color: #0061b7;     
 }
+
 
 .logo {
     padding: 10px 10px 0 10px;
@@ -246,7 +247,7 @@ footer .nav li a {
       margin: 0 2px;
       width: 30px;
       height: 3px;
-      border: none;
+      border: 0;
       border-radius: 0;
       line-height: 30px;
       color: #fff;
@@ -263,37 +264,34 @@ footer .nav li a {
 .schedule{
    top: 15px;
 }
-.tab-pane h4 > a{
-    text-decoration: none;
-}
-.panel-title > a {
+.schedule .panel-title > a {
     position: relative;
     display: block;
-    line-height: 30px;
+    line-height: 50px;
 }
-.panel-title > a:after {   
+.schedule .panel-title > a:after {   
     position: absolute;   
-    right: 15px;
-    top: 50%;
-    margin-top: -12px;
+    right: 0px;
+    top: 5px;
+   /* margin-top: -25px;*/
 }
-.panel-title > a[aria-expanded="false"]:after {  
+.schedule .panel-title > a[aria-expanded="false"]:after {  
     font-family: Font Awesome\ 5 Free;
     content: "\f078";
-    font-weight: 900;
+    font-weight: 700;
 }
 
-.panel-title > a[aria-expanded="true"]:after {
+.schedule .panel-title > a[aria-expanded="true"]:after {
     font-family: Font Awesome\ 5 Free;
     content: "\f077";
-    font-weight: 900; 
+    font-weight: 700; 
 }
-.panel-title .time {
+.schedule .time {
     background-color: #333;
     color: #fff;
-    padding: 7px 15px;   
+    padding: 10px 18px;   
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -327,16 +325,18 @@ footer .nav li a {
   .overview{
       margin-top: 0;
   } 
-  .panel-body .visible-xs{
+  .schedule .panel-body .visible-xs{
       margin-left: 15px;
   }
- .panel-title > a { 
-    poition: relative;     
-}
-.movie-year{
+ 
+.schedule .movie-year{
     display: inline-block;  
     position:absolute;     
     left: 40%;      
+    font-size: 24px;   
+}
+.schedule .year{
+    font-size: 14px;
 }
 .booking{    
     background: url('../img/festival.jpg') no-repeat center center;
@@ -433,7 +433,8 @@ footer .nav li a {
 .contact-info ul {   
     
     background-color: #0062ba;
-    border: 0px solid #ddd;
+  /*  border: 0px solid #ddd;*/
+    border:0;
     padding: 70px 20px 20px;
     margin: 30px 0 30px 0;
     list-style: none;
@@ -511,7 +512,7 @@ footer .nav li a {
 }
 .contact-panel{
     background-color: #efeeec;
-    border:none;
+    border:0;
 }
 
 .contact-page{    
@@ -521,7 +522,7 @@ footer .nav li a {
 .contact-panel .btn{
     background: #0062ba;
     color: #fff;
-    border: none;
+    border: 0;
 }
 .contact-panel .btn:hover{
     background: #1e558b;   
@@ -534,7 +535,7 @@ footer .nav li a {
 .panel select option{
     color: #555;
  }
-.contact footer{
+#contact footer{
     margin-top:0;
 }
 input[type=checkbox] {
@@ -551,9 +552,17 @@ input[type=checkbox] {
     .carousel-caption{                   
         bottom: 10px;
      }
-     .carousel-caption h1, a, p{
+     .carousel-caption h1,  .carousel-caption a,  .carousel-caption p{
         margin-bottom: 10px;
-    }   
+    }  
+    
+    .schedule .movie-year{      
+        left: 34%;            
+    }
+    .schedule .time {
+        position: relative;
+        top: 5px; 
+    } 
   
 }
 @media screen and (max-width: 767px) {
@@ -600,7 +609,26 @@ input[type=checkbox] {
     }    
      .schedule{
          top:0;
-     }    
+     }      
+     .schedule .movie-year{
+        height: 60px;            
+        left: 40%;
+    }
+    .schedule .movie-year:before { 
+        content: '';
+        display: inline-block;
+        height: 100%;       
+        vertical-align: middle;
+        margin-right: -30px;
+    }
+    .schedule .movie-year > span{             
+        line-height: 24px;          
+        display: inline-block;       
+        vertical-align: middle;       
+    }    
+    .schedule .panel-title > a:after {              
+        top: 10px;      
+    }    
 }
 @media screen and (max-width: 480px) {
    
@@ -653,16 +681,27 @@ input[type=checkbox] {
     .carousel-caption  p{
         margin-bottom: 5px;
         font-size:12px;  
+    } 
+    .schedule .movie-year{       
+        left:37%;              
     }
-    .year{
-        display:none;
-    }  
+  
+    .schedule .movie-year > span{       
+        font-size: 22px;  
+        line-height: 24px;                   
+    } 
+    /*.schedule .year{
+        font-size:14px;
+    } */  
+    .schedule .panel-title > a:after {              
+        right: 0;      
+    }    
+       
 }
 @media screen and (max-width: 380px) {
     .carousel-caption h1{
         margin-bottom: 20px;
-        font-size: 24px;
-        font-weight:700;
+        font-size: 20px;      
     }
     .carousel-caption p, .main-button{
         display: none;
@@ -670,7 +709,14 @@ input[type=checkbox] {
     .carousel-caption .mobile-button{
         display: inline-block;
     }
+    /*.schedule .movie-year:before { 
+        margin-left: -30px;
+    }*/
+    .schedule .movie-year{
+        left: 45%;
+    }
 }
+
 /*@media screen-s for contact form data*/
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {

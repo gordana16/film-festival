@@ -11,7 +11,7 @@
     <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="contact">
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">          
@@ -55,7 +55,7 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 col-md-4" style="background-color:#ddd);">
+          <div class="col-sm-6 col-md-4">
             <div class="contact-info">             
               <div class="logo">
                  <img src="img/logo-c.png" alt="Brooklyn Film Festival">
@@ -104,14 +104,14 @@
                     <input type="text" name="name" class="form-control" placeholder="Full name">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="_replyto"class="form-control" placeholder="Email">
+                    <input type="email" name="_replyto" class="form-control" placeholder="Email">
                   </div>
                   <div class="form-group">
                       <input type="tel" name="phone" class="form-control" placeholder="Phone">
                     </div>
                   <div class="form-group">
-                    <select name="question" class="form-control" contact-message>
-                        <option value="" selected disabled>Subject</option>
+                    <select name="question" class="form-control" required>
+                        <option disabled selected value="">Subject</option>
                         <option value="general">General Inquiries</option>
                         <option value="film-submission">Film Submission Inquiries</option>
                         <option value="press">Press Inquiries</option>
@@ -135,32 +135,49 @@
     </section>
   </main>
       
-  <footer class= "navbar-inverse contact-footer">      
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">                
+  <footer class="navbar-inverse">  
+    <div class="container-fluid ft-top">
+      <div class="row news">
+        <div class="col-sm-8">
           <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
           method="POST"> 
             <h4>Get Festival Offers and News</h4>                                            
-            <div class="input-group input-group-md">                     
-            <input type="email" name="_replyto" class="form-control input-lg" placeholder="Enter your email addres">
+            <div class="input-group input-group-lg">                     
+            <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
             <div class="input-group-btn">
-              <button class="btn btn-danger btn-lg" type="submit" value="Send">
+              <button class="btn btn-default" type="submit" value="Send">
               Sign Up
               </button>
             </div>
             </div>                  
           </form>
         </div>
-      </div>
-     <div class="row">
-       <div class="col-xs-12">           
+        <div class="col-sm-4">
+          <div class="brooklyn-links">
+            <h4>Find out more</h4>
+              <ul>
+                <li>
+                <a href="https://www.brooklynpaper.com/">Brooklyn's News <i class="fas fa-angle-right"></i>
+                </a>
+                </li>
+              <li>
+                <a href="https://www.brooklynbridgepark.org/">Brooklyin Bridge Park <i class="fas fa-angle-right"></i>
+                </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+      </div> 
+    </div>  
+    <div class="container ft-bottom">      
+      <div class="row">
+        <div class="col-xs-12">           
           <ul class="nav navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#rsvp">Reservations</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -181,47 +198,34 @@
             <p class="copyright">&copy; 2018 Brooklyn Outdoor Film Festival.</p>
           </div>
         </div>
-      </div>      
- </footer>  
+    </div>        
+  </footer>
+      
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <script>
+    $(window).resize(function() {
+      if ($(window).width() < 480) {    
+          $(".newsletter-form .input-group").removeClass("input-group-lg");  
+          $(".newsletter-form .input-group").addClass("input-group-sm");     
+        }
+        else {
+          $(".newsletter-form .input-group").removeClass("input-group-sm");  
+          $(".newsletter-form .input-group").addClass("input-group-lg");
+        }
+        });
 
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $(window).resize(function() {
-      if ($(window).width() < 480) {
-          $("input").removeClass("input-lg");
-          $("button").removeClass("btn-lg");
-  
-          $("input").addClass("input-sm");
-          $("button").addClass("btn-sm");
-      }
-      else {
-          $("input").removeClass("input-sm");
-          $("button").removeClass("btn-sm");
-  
-          $("input").addClass("input-lg");
-          $("button").addClass("btn-lg");
-          }
-          });
-  
-          $(window).load(function() {
-      if ($(window).width() < 480) {
-          $("input").removeClass("input-lg");
-          $("button").removeClass("btn-lg");
-  
-          $("input").addClass("input-sm");
-          $("button").addClass("btn-sm");
-      }
-      else {
-          $("input").removeClass("input-sm");
-          $("button").removeClass("btn-sm");
-  
-          $("input").addClass("input-lg");
-          $("button").addClass("btn-lg");
-          }
-          });
-    </script>
+    $(window).load(function() {
+        if ($(window).width() < 480) {
+          $(".newsletter-form .input-group").removeClass("input-group-lg");
+          $(".newsletter-form .input-group").addClass("input-group-sm");
+        }
+        else {
+          $(".newsletter-form .input-group").removeClass("input-group-sm");
+          $(".newsletter-form .input-group").addClass("input-group-lg");
+        }
+        });
+  </script>
 </body>
 </html>
