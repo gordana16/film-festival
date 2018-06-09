@@ -7,11 +7,11 @@
     <title>Reservations - Brooklyn Festival Film</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">    
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!--link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="footer-margin">
+<body id="booking" class="footer-margin">
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">          
@@ -24,7 +24,7 @@
         </button>          
         <a class="navbar-brand">
           <img src="img/logo.png" height="50" alt="">
-          <span class="title visible-md visible-lg">Outdoor Film Festival</span>
+          <span class="brand visible-lg">Outdoor Film Festival</span>
         </a>
     </div>    
     <div id="navbar" class="collapse navbar-collapse">
@@ -108,39 +108,41 @@
   </main>
     
   <footer class="navbar-inverse">  
-    <div class="container-fluid ft-top">
-      <div class="row news">
-        <div class="col-sm-8">
-          <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
-          method="POST"> 
-            <h4>Get Festival Offers and News</h4>                                            
-            <div class="input-group input-group-lg">                     
-            <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit" value="Send">
-              Sign Up
-              </button>
-            </div>
-            </div>                  
-          </form>
-        </div>
-        <div class="col-sm-4">
-          <div class="brooklyn-links">
-            <h4>Find out more</h4>
-              <ul>
-                <li>
-                <a href="https://www.brooklynpaper.com/">Brooklyn's News <i class="fas fa-angle-right"></i>
-                </a>
-                </li>
-              <li>
-                <a href="https://www.brooklynbridgepark.org/">Brooklyin Bridge Park <i class="fas fa-angle-right"></i>
-                </a>
-              </li>               
-            </ul>
+    <div class=" ft-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
+            method="POST"> 
+              <h4>Get Festival Offers and News</h4>                                            
+              <div class="input-group input-group-lg">                     
+              <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" value="Send">
+                Sign Up
+                </button>
+              </div>
+              </div>                  
+            </form>
           </div>
-        </div>
+          <div class="col-sm-4">
+            <div class="brooklyn-links">
+              <h4>Find out more</h4>
+                <ul>
+                  <li>
+                  <a href="https://www.brooklynpaper.com/">Brooklyn's News <i class="fas fa-angle-right"></i>
+                  </a>
+                  </li>
+                <li>
+                  <a href="https://www.brooklynbridgepark.org/">Brooklyin Bridge Park <i class="fas fa-angle-right"></i>
+                  </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+        </div> 
       </div> 
-    </div>  
+    </div>
     <div class="container ft-bottom">      
       <div class="row">
         <div class="col-xs-12">           
@@ -170,7 +172,8 @@
             <p class="copyright">&copy; 2018 Brooklyn Outdoor Film Festival.</p>
           </div>
         </div>
-    </div>        
+    </div>
+      
   </footer>
     
     <script src="js/jquery.min.js"></script>

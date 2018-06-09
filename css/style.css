@@ -1,18 +1,21 @@
 body {
     padding-top: 60px;
   }
+ 
 #home {
 	padding-top: 80px;
 }
-.visible-lg {
-    display: inline-block!important;
+
+/*header*/
+/* display "Outdoor Film Festival in header" for large and medium screens*/
+.brand.visible-lg {
+    display: inline-block !important;
 }
 .navbar{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     border-bottom: 0;
 }
-
 .navbar-brand {
     height: 60px;
     padding: 2px 15px;
@@ -22,7 +25,6 @@ body {
     height: 100%;
     display: inline-block;
 }
-
 .navbar-default .navbar-nav>li>a {
 	padding-top: 20px;
     padding-bottom: 20px;    
@@ -38,77 +40,88 @@ body {
     background-color: #0061b7;     
 }
 
-
 .logo {
     padding: 10px 10px 0 10px;
   }
   
-.title {   
+.brand {   
     font-size: 24px;    
     color: #000;
     padding-top: 15px;
     padding-left: 15px;
 }
+
+/*footer*/
 footer{
     color: #fff;
     text-align: center;
-    margin-top: 60px;    
-   
+    margin-top: 60px;      
 }
 .ft-bottom{
     margin-top: 60px;
 }
-.news{
+.ft-top{
     background: #0061b7;
     max-height: 150px; 
 }
-
 .newsletter-form {	   
     margin: 0 auto;
     padding: 10px 10px 30px; 
 }
 .newsletter-form .btn{
-    border:0;
+    border: 0;
     background: #e7484b;        
     color: #fff;   
 }
-.newsletter-form .btn:hover{
-  
+.newsletter-form .btn:hover{  
     background: #b63c3e;   
 }
-
-.brooklyn-links{     
-    margin-right:-15px;
-    padding: 20px 10px 70px;   
+.brooklyn-links{      
     background: #e7484b;   
-    max-height: 150px;
-    text-align: center;
-   
+    max-height: 145px;
+    text-align: left; 
+    position: relative; 
+    padding: 20px 40px;
 }
-.brooklyn-links ul{ 
+.brooklyn-links::before {
+    content: "";
+    height: 145px;
+    width: 2000px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: inherit;
+    z-index: 0;
+}
+.brooklyn-links ul{
+   position: relative;
    text-align: left;
    list-style: none;
-   display:inline-block;
-   padding-left:0; 
-   margin-left: 33px; 
+   display: inline-block;
+   padding-left: 0; 
+   margin-left: 0; 
 }    
 .brooklyn-links a{
     text-decoration: none;
     font-size: 18px;
     line-height: 28px;
-    color:#fff;    
+    color: #fff;    
 }
 .brooklyn-links a:hover{
     color: #909AA0;       
 }
 .brooklyn-links h4{
+    position: relative;
     text-transform: uppercase;
-    margin-left: -10px;
+    margin-left: 0;
 }
-
 .newsletter-form h4 {
 	text-transform: uppercase;     
     margin-bottom: 30px;
+}
+footer  {
+    overflow: hidden;
 }
 footer .nav {
     width: 100%;
@@ -128,11 +141,9 @@ footer .nav li a {
     margin: 20px;
     padding: 0;
 }
-
 .social li {
     display: inline-block;
 }
-
 .social i {
     display: block;
     margin: 5px 10px;
@@ -173,10 +184,10 @@ footer .nav li a {
     margin: 20px;
 }
 
+/*slider on homepage*/
 #fest-carousel {    
     margin-bottom: 60px;
 }
-
 #countdown-timer{
    max-width: 500px;
    height: auto;   
@@ -184,11 +195,10 @@ footer .nav li a {
    text-transform: uppercase;
    text-align: center;
 }
-.main-event
-{
+.main-event{
     position: absolute;
-    top: 10px;
-    left:10px;
+    top: 0;
+    left: 20px;
     width: auto;
     color: #FFF;
     font-weight: 700;
@@ -199,22 +209,32 @@ footer .nav li a {
 }   
 .carousel .carousel-control {
     opacity: 1
-  }
-  .carousel .carousel-control.left {
+ }
+ .carousel .carousel-control.left { 
     background-image: linear-gradient(to right, rgb(0, 0, 0) 0, rgba(0, 0, 0, 0) 100%);
-  }
-  .carousel .carousel-control.right {
+ }
+.carousel .carousel-control.right {    
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgb(0, 0, 0) 100%);
-  }  
-  
-   /* add darkness over the image */
-  .item {
+}  
+.carousel .carousel-control > i{
+    font-size: 40px;
+    font-weight: 700;
+    position:absolute;
+    top:45%;
+}
+.carousel .carousel-control.left > i{
+    left: 30%;
+}
+.carousel .carousel-control.right > i{
+    right: 30%;
+}
+/* add darkness over the image */
+ .item {
     position: relative;      
-  }
-  .item:before {
+ }
+.item::before {
     content: '';
-    background: rgba(0, 0, 0, 0.5);
-    /* change this value from 0.1 to 1; */
+    background: rgba(0, 0, 0, 0.5);   
     width: 100%;
     height: 100%;
     display: block;
@@ -224,69 +244,66 @@ footer .nav li a {
     width: 100%;
     height: 100%;
     z-index: 5;
-  }
-
-  .carousel-caption{
-      bottom: 10px;
-      padding-bottom: 10px;       
-      text-align: left;     
-  }
- .carousel-caption > a {
+ }
+.carousel-caption{
+    bottom: 10px;
+    padding-bottom: 10px;       
+    text-align: left;     
+}
+.carousel-caption > a {
     text-decoration: none;
     text-transform: uppercase;   
-  }
-
-  .carousel-caption h1, p{
-      margin-bottom: 10px;     
-  }  
-  .carousel-indicators {
-	bottom: -50px;
-  }
-  .carousel-indicators li {
-      text-indent: 0;
-      margin: 0 2px;
-      width: 30px;
-      height: 3px;
-      border: 0;
-      border-radius: 0;
-      line-height: 30px;
-      color: #fff;
-      background-color: #635e5e;
-      transition: all 0.25s ease;
 }
-
+.carousel-caption h1, p{
+    margin-bottom: 10px;     
+}  
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-indicators li {
+    text-indent: 0;
+    margin: 0 2px;
+    width: 30px;
+    height: 3px;
+    border: 0;
+    border-radius: 0;
+    line-height: 30px;
+    color: #fff;
+    background-color: #635e5e;
+    transition: all 0.25s ease;
+}
 .carousel-indicators .active{
     margin: 0 2px;
     width: 30px;
     height: 7px;
     background-color: #337ab7;   
 }
-.schedule{
-   top: 15px;
+/*schedule page*/
+#schedule .tab-content{
+     margin-top: 15px;
 }
-.schedule .panel-title > a {
+#schedule .panel-title > a {
     position: relative;
     display: block;
     line-height: 50px;
 }
-.schedule .panel-title > a:after {   
+#schedule .panel-title > a::after {   
     position: absolute;   
     right: 0px;
     top: 5px;
    /* margin-top: -25px;*/
 }
-.schedule .panel-title > a[aria-expanded="false"]:after {  
+#schedule .panel-title > a[aria-expanded="false"]::after {  
     font-family: Font Awesome\ 5 Free;
     content: "\f078";
     font-weight: 700;
 }
-
-.schedule .panel-title > a[aria-expanded="true"]:after {
+#schedule .panel-title > a[aria-expanded="true"]::after {
     font-family: Font Awesome\ 5 Free;
     content: "\f077";
     font-weight: 700; 
 }
-.schedule .time {
+#schedule .time {
     background-color: #333;
     color: #fff;
     padding: 10px 18px;   
@@ -294,7 +311,6 @@ footer .nav li a {
     font-size: 20px;
     font-weight: 700;
 }
-
 .date-box {
     background-color: #3461ba;
     color: #fff;
@@ -307,43 +323,41 @@ footer .nav li a {
     line-height: 22px;
     display: block;
 }
-
 .date-box .day {
     font-size: 30px;
     font-weight: 700;
 }
-
-.btn-outline {
+#schedule .btn-outline {
     border: 1px solid #3461ba;
     color: #3461ba;
 }
 
-.nav-date.nav>li>a {
+#schedule .nav-date.nav>li>a {
     padding: 0;
     border: 0;
 }
-  .overview{
-      margin-top: 0;
-  } 
-  .schedule .panel-body .visible-xs{
-      margin-left: 15px;
-  }
- 
-.schedule .movie-year{
+.overview{
+    margin-top: 0;
+} 
+#schedule .panel-body .visible-xs{
+    margin-left: 15px;
+} 
+#schedule .movie-year{
     display: inline-block;  
-    position:absolute;     
+    position: absolute;     
     left: 40%;      
     font-size: 24px;   
 }
-.schedule .year{
+#schedule .year{
     font-size: 14px;
 }
-.booking{    
+
+/*booking page*/
+#booking main .container{    
     background: url('../img/festival.jpg') no-repeat center center;
     background-size: cover;   
 }
-
-.booking .panel{
+#booking .panel{
     max-width: 500px;
     margin: 50px auto 30px auto;
     border:0;     
@@ -352,13 +366,13 @@ footer .nav li a {
     /*position: relative;   */
     transition: 1s;      
 }
-.booking .panel:hover{
+#booking .panel:hover{
     background: rgba(0,0,0,0.7);
 }
-.booking .panel-body{
+#booking .panel-body{
     padding: 40px 30px 30px 30px;
 }
-.label-1{
+#booking .label-1{
     position: relative;
     display: inline-block;
     top: 10px;   
@@ -369,37 +383,42 @@ footer .nav li a {
     transform: rotate(-20deg);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);   
 }
-.label-1:after{
-    position:absolute;    
-    content:"";
-    top:-10px;
-    left:5px;
-    width:100%;
-    height:100%;
+#booking .label-1::after{
+    position: absolute;    
+    content: "";
+    top: -10px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
     transform: rotate(-10deg);
     background: rgba(230, 169, 101, 0.5);  
     z-index: -2;
 }
-.label-1:before{
-    position:absolute;    
-    content:"";
+#booking .label-1::before{
+    position: absolute;    
+    content: "";
     top: 0;
-    left:5px;
-    width:100%;
-    height:100%;
+    left: 5px;
+    width: 100%;
+    height: 100%;
     background: #e7484b;
     z-index: -1;
 }
-
-.booking .btn{
-    border:0;
+#booking .btn{
+    border: 0;
     background: #e7484b;   
     color: #fff;   
 }
-.booking .btn:hover{   
+#booking .btn:hover{   
     background: #b63c3e; 
 }
-.image-box img{ 
+input[type=checkbox] {
+    margin: 4px 0 0 -20px !important;
+    height: unset !important;
+}
+
+/*about page*/
+#about .image-box img{ 
    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);   
 }
 .about-text{
@@ -407,41 +426,40 @@ footer .nav li a {
     text-align: justify;  
 }
 
-
+/*contact-page*/
+#contact section:first-child{
+    margin-bottom: 30px;
+}
 .contact-info {
     background-color: #fff;
     color: #fff;   
     padding: 10px 40px 30px 40px;
-    margin-bottom: 30px;
-   /* border-radius: 20px;*/
+    margin-bottom: 30px;   
     text-align: center;    
 }
 .contact-info .logo {
     max-width: 50%;   
     margin: 0 auto;    
-    padding-bottom:5px;
+    padding-bottom: 5px;
     position: absolute;
-    top:40px;
+    top: 40px;
     left: 25%;  
     background-color: #fff;
 }
 .contact-info .logo img{    
-    max-width:100%;   
-    display:inline-block;   
+    max-width: 100%;   
+    display: inline-block;   
 }
-
-.contact-info ul {   
-    
-    background-color: #0062ba;
-  /*  border: 0px solid #ddd;*/
-    border:0;
+.contact-info ul {       
+    background-color: #0062ba; 
+    border: 0;
     padding: 70px 20px 20px;
     margin: 30px 0 30px 0;
     list-style: none;
     text-align: left;   
 }
 .email-address{   
-    color:#fff;
+    color: #fff;
 }
 .contact-info a{
     text-decoration: none;  
@@ -452,8 +470,7 @@ footer .nav li a {
     font-weight: 700;   
     margin-bottom: 20px;
 }
-.contact-info .social-icons a{     
-
+.contact-info .social-icons a{ 
     color: #9aa4b9;    
     display: inline-block;   
     font-size: 20px;
@@ -470,8 +487,7 @@ footer .nav li a {
     font-size: 28px;
     font-weight: 900;  
     position: relative;
-    display: inline-block;
-  
+    display: inline-block;  
 }
 /*left-top*/
 .contact-info ul:before{
@@ -479,98 +495,93 @@ footer .nav li a {
     left: -12px;
 }
 /*left-bottom*/
-.contact-info ul:after{
+.contact-info ul::after{
     top: 10px;
     left: -40px;
 }
-
 .right-top, .right-bottom, .right-middle{
     line-height: 22px;
     font-size: 28px;
     font-weight: 900;  
-    position: relative;   
-    /*background-color: #fff;*/   
+    position: relative;      
 }
-
 .right-top{
     top: -50px;
     left: 198px;
 }
-
 .right-bottom{
     top: 10px;
     left: 225px;
 }
-
 .right-middle{
     top: -5px;
     left: 60px;
 }
-
 .left-middle{
-    display:none;
+    display: none;
 }
-.contact-panel{
+#contact .panel{
     background-color: #efeeec;
-    border:0;
+    border: 0;
+    box-shadow: none;
 }
-
-.contact-page{    
-    background-color:#efeeec;
+#contact main{    
+    background-color: #efeeec;
 }
-
-.contact-panel .btn{
+#contact .panel .btn{
     background: #0062ba;
     color: #fff;
+    padding: 8px 16px;
     border: 0;
 }
-.contact-panel .btn:hover{
+#contact .panel .btn:hover{
     background: #1e558b;   
 }
+#contact footer{
+    margin-top:0;
+}
 
+/*simulate placeholder for drop-down list*/
 .panel select:invalid{
-    color: #999;
-   
+    color: #999;   
 }
 .panel select option{
     color: #555;
  }
-#contact footer{
-    margin-top:0;
-}
-input[type=checkbox] {
-    margin: 4px 0 0 -20px !important;
-    height: unset !important;
-}
 
+
+/*tablet and mobile view*/
 
 @media screen and (max-width: 992px) {
-    .visible-lg {
+    /*not display "Outdoor Film Festival in header"*/
+    .brand.visible-lg {
         display: none !important;
     }
-
+    /*homepage slider*/
     .carousel-caption{                   
         bottom: 10px;
      }
      .carousel-caption h1,  .carousel-caption a,  .carousel-caption p{
         margin-bottom: 10px;
-    }  
+    }   
     
-    .schedule .movie-year{      
+    /*schedule page*/
+    #schedule .movie-year{      
         left: 34%;            
     }
-    .schedule .time {
+    #schedule .time {
         position: relative;
         top: 5px; 
-    } 
-  
-}
-@media screen and (max-width: 767px) {
-   
-    .visible-lg {
-        display: none !important;
+    }
+
+    /*footer*/
+    .brooklyn-links{
+        padding: 20px 0 20px 32px;
     }  
-   
+}
+
+@media screen and (max-width: 767px) {    
+    /*footer*/
     .footer-margin footer{
         margin-top: 0px;
     }
@@ -582,23 +593,25 @@ input[type=checkbox] {
     } 
     .brooklyn-links{                  
         padding: 20px 0;
-        margin-left:-15px;
-        margin-right:-15px;        
-     } 
-     .brooklyn-links ul{
-         margin-left: 43px;
+        margin-left: -15px;
+        margin-right: -15px;        
+     }     
+     .brooklyn-links >ul>li{
+        text-align: left;
+    }   
+     .brooklyn-links{
+         text-align: center;       
      }
-     .brooklyn-links h4{       
-         margin-left: 0;
-     }  
-     .nav-date.nav>li {
+     .brooklyn-links >ul{
+         margin-left: 40px;
+     }    
+
+     /*about page*/
+     #about .image-box img{       
         display: inline-block;
-     }
-     .image-box img{       
-        display:inline-block;
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);   
     }  
-    .image-box {
+     #about .image-box {
         margin-left: -15px;
         margin-right: -15px;
         margin-top: 40px;
@@ -606,40 +619,40 @@ input[type=checkbox] {
     }  
     .about-text-xs{       
         text-align: justify;   
-    }    
-     .schedule{
-         top:0;
+    }   
+
+     /*schedule page*/
+     #schedule .nav-date.nav>li {
+        display: inline-block;
+     }     
+     #schedule .tab-content{
+         margin-top: 0;
      }      
-     .schedule .movie-year{
+     #schedule .movie-year{
         height: 60px;            
         left: 40%;
     }
-    .schedule .movie-year:before { 
+    #schedule .movie-year::before { 
         content: '';
         display: inline-block;
         height: 100%;       
         vertical-align: middle;
         margin-right: -30px;
     }
-    .schedule .movie-year > span{             
+    #schedule .movie-year > span{             
         line-height: 24px;          
         display: inline-block;       
         vertical-align: middle;       
     }    
-    .schedule .panel-title > a:after {              
+    #schedule .panel-title > a::after {              
         top: 10px;      
     }    
 }
-@media screen and (max-width: 480px) {
-   
-    .brooklyn-links{         
-        margin-top: -40px;
-        padding:10px 0;;
-     }
-    .news{
+@media screen and (max-width: 480px) { 
+    /*footer*/
+    .ft-top{
          max-height: 250px;
      }
-
     footer .nav {
         display: none;
     }
@@ -660,16 +673,18 @@ input[type=checkbox] {
         font-size: 16px;  
         font-weight: 700;             
     }
-    .brooklyn-links ul{
-        margin-left: 38px;
-    } 
+    .social{
+        margin-top: 60px;
+    }
     .social i {              
         margin: 4px 4px;
         width: 30px;
         height: 30px;
         line-height: 30px;      
         font-size: 14px; 
-    }      
+    }  
+    
+    /*homepage slider*/
     .carousel-caption {        
         bottom: 20px;    
      }     
@@ -680,25 +695,32 @@ input[type=checkbox] {
     }
     .carousel-caption  p{
         margin-bottom: 5px;
-        font-size:12px;  
-    } 
-    .schedule .movie-year{       
-        left:37%;              
+        font-size: 12px;  
     }
-  
-    .schedule .movie-year > span{       
+
+    /*schedule page*/
+    #schedule .movie-year{       
+        left: 37%;              
+    }  
+    #schedule .movie-year > span{       
         font-size: 22px;  
         line-height: 24px;                   
-    } 
-    /*.schedule .year{
-        font-size:14px;
-    } */  
-    .schedule .panel-title > a:after {              
-        right: 0;      
     }    
-       
+    #schedule .panel-title > a::after {              
+        right: 0;      
+    }
+
+    /*contact-page*/
+    #contact iframe{
+       height: 250px;
+    }
+    #contact section:first-child{
+        margin-bottom:20px;
+    }
 }
+
 @media screen and (max-width: 380px) {
+    /*homepage slider*/
     .carousel-caption h1{
         margin-bottom: 20px;
         font-size: 20px;      
@@ -709,16 +731,14 @@ input[type=checkbox] {
     .carousel-caption .mobile-button{
         display: inline-block;
     }
-    /*.schedule .movie-year:before { 
-        margin-left: -30px;
-    }*/
-    .schedule .movie-year{
+
+    /*schedule page*/
+    #schedule .movie-year{
         left: 45%;
     }
 }
 
-/*@media screen-s for contact form data*/
-
+/*@media screen-s for contact form data - white dots*/
 @media screen and (max-width: 1199px) and (min-width: 992px) {
     .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle{
         line-height: 14px;
@@ -727,11 +747,11 @@ input[type=checkbox] {
     .contact-info ul::before{
         left:-15px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         left: -35px;
     }
     .right-top{
-        left:152px;
+        left: 152px;
     }
     .right-middle{
         top: -20px;
@@ -782,32 +802,31 @@ input[type=checkbox] {
    } 
  
    .contact-info ul::before{
-       left:-55px;
+       left: -55px;
    }
    .contact-info ul::after{
-       left:-90px;
+       left: -90px;
    }
    .left-middle{ 
-    display:inline-block;
+    display: inline-block;
     top: 50px;     
     left:-123px;
     }   
    .right-top{          
-       left:415px;      
+       left: 415px;      
    }
    .right-middle{ 
        top: -10px;     
        left: 286px;
-   }
-  
+   }  
    .right-bottom{    
        left: 453px;
-   }
-   
+   }   
 }
+
 @media screen and (max-width: 680px) and (min-width: 610px) {
     .right-top{          
-        left:415px;      
+        left: 415px;      
     }
     .right-middle{              
         left: 280px;
@@ -816,28 +835,26 @@ input[type=checkbox] {
         left: 445px;
     }
 }
+
 @media screen and (max-width: 609px) and (min-width: 545px) {
     .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
         line-height: 22px;
         font-size: 26px;
-    }  
-    
+    }      
     .right-top{          
         left:360px;      
     }
     .right-middle{              
         left: 223px;
-    }
-  
+    }  
     .right-bottom{    
         left: 388px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         top: 10px;
         left: -15px;
     }
-    .contact-info ul:before{
-       
+    .contact-info ul::before{       
         left: 15px;
     }
   
@@ -848,7 +865,7 @@ input[type=checkbox] {
         font-size: 26px;
     }      
     .right-top{          
-        left:315px;      
+        left: 315px;      
     }
     .right-middle{              
         left: 178px;
@@ -856,11 +873,11 @@ input[type=checkbox] {
     .right-bottom{    
         left: 341px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         top: 10px;
         left: -15px;
     }
-    .contact-info ul:before{
+    .contact-info ul::before{
        
         left: 10px;
     }
@@ -872,7 +889,7 @@ input[type=checkbox] {
         font-size: 18px;
     }      
     .right-top{          
-        left:283px;      
+        left: 283px;      
     }
     .right-middle{              
         left: 138px;
@@ -880,15 +897,14 @@ input[type=checkbox] {
     .right-bottom{    
         left: 303px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         top: 10px;
         left: -13px;
     }
-    .contact-info ul:before{       
+    .contact-info ul::before{       
         left: 8px;
     }
 }
-
 
 @media screen and (max-width: 450px) and (min-width: 420px) {
    
@@ -899,7 +915,7 @@ input[type=checkbox] {
     .contact-info ul::before{
         left:0;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         left: -20px;
     }
     .right-top{
@@ -922,11 +938,11 @@ input[type=checkbox] {
     .contact-info ul::before{
         left:-5px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         left: -23px;
     }
     .right-top{
-        left:223px;
+        left: 223px;
     }
     .right-middle{
         top: -20px;
@@ -943,9 +959,9 @@ input[type=checkbox] {
         font-size: 18px;
     }         
     .contact-info ul::before{
-        left:-8px;
+        left: -8px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         left: -25px;
     }
     .right-top{
@@ -966,13 +982,13 @@ input[type=checkbox] {
         font-size: 18px;
     }  
     .contact-info ul::before{
-        left:-8px;
+        left: -8px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         left: -27px;
     }       
     .right-top{
-        left:191px;
+        left: 191px;
     }
     .right-middle{
         top: -10px;
@@ -989,13 +1005,13 @@ input[type=checkbox] {
         font-size: 18px;
     }  
     .contact-info ul::before{
-        left:-10px;
+        left: -10px;
     }
-    .contact-info ul:after{
+    .contact-info ul::after{
         left: -29px;
     }       
     .right-top{
-        left:177px;
+        left: 177px;
     }
     .right-middle{
         top: -10px;
@@ -1006,19 +1022,20 @@ input[type=checkbox] {
         left: 197px;
     }
 }
+
 @media screen and (max-width: 344px) and (min-width: 335px) {
     .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
         line-height: 14px;
         font-size: 18px;
     }
         .contact-info ul::before{
-            left:-10px;
+            left: -10px;
         }
         .contact-info ul::after{
             left: -27px;
         }       
         .right-top{
-            left:165px;
+            left: 165px;
         }
         .right-middle{
             top: -10px;
@@ -1030,35 +1047,35 @@ input[type=checkbox] {
         }
     }  
 
-    @media screen and (max-width: 334px) and (min-width: 331px) {
-        .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
-            line-height: 14px;
-            font-size: 18px;
-        }
-            .contact-info ul::before{
-                left: -13px;
-            }
-            .contact-info ul::after{
-                left: -30px;
-            }       
-            .right-top{
-                left:160px;
-            }
-            .right-middle{
-                top: -10px;
-                left: 15px;
-            }
-            .right-bottom{
-                top: 10px;
-                left: 180px;
-            }
-        }  
-@media screen and (max-width: 330px) and (min-width: 323px) {
-        .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{ 
-            display:none;
-        }
-      
+@media screen and (max-width: 334px) and (min-width: 331px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{      
+        line-height: 14px;
+        font-size: 18px;
     }
+        .contact-info ul::before{
+            left: -13px;
+        }
+        .contact-info ul::after{
+            left: -30px;
+        }       
+        .right-top{
+            left: 160px;
+        }
+        .right-middle{
+            top: -10px;
+            left: 15px;
+        }
+        .right-bottom{
+            top: 10px;
+            left: 180px;
+        }
+    }  
+@media screen and (max-width: 330px) and (min-width: 323px) {
+    .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{ 
+        display: none;
+    }
+    
+}
 
 @media screen and (max-width: 322px) and (min-width: 319px) {
     .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle{       
@@ -1072,7 +1089,7 @@ input[type=checkbox] {
         left: -35px;
     }       
     .right-top{
-        left:150px;
+        left: 150px;
     }
     .right-middle{
         top: -30px;
@@ -1086,7 +1103,7 @@ input[type=checkbox] {
 }
 @media screen and (max-width: 318px) {
     .contact-info ul::before, .contact-info ul::after, .right-top, .right-bottom, .right-middle, .left-middle{ 
-        display:none;
+        display: none;
     }
 }
 

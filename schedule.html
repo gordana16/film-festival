@@ -8,10 +8,11 @@
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="schedule">
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">          
@@ -24,7 +25,7 @@
         </button>          
         <a class="navbar-brand">
           <img src="img/logo.png" height="50" alt="">
-          <span class="title visible-md visible-lg">Outdoor Film Festival</span>
+          <span class="brand visible-lg">Outdoor Film Festival</span>
         </a>
     </div>
      
@@ -79,7 +80,7 @@
           </li>
         </ul>
       </div>
-        <div class="schedule col-sm-10 col-lg-11">
+        <div class="col-sm-10 col-lg-11">
           <div class="row tab-content">
             <div role="tabpanel" class="tab-pane fade active in" id="sunday">
               <div class="panel-group" id="accordionSunday" role="tablist" aria-multiselectable="true">
@@ -557,7 +558,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingTuesday-2">
                         <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionTuesday" href="#collapseTuesday-3" aria-expanded="false" aria-controls="collapseTuesday-3">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionTuesday" href="#collapseTuesday-2" aria-expanded="false" aria-controls="collapseTuesday-2">
                             <span class="time">20:00</span>   
                             <div class="movie-year">
                                 <span><strong>Backstabbing for Beginners</strong>
@@ -765,7 +766,7 @@
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionWednesday" href="#collapseWednesday-2" aria-expanded="false" aria-controls="collapseWednesday-2">
                           <span class="time">20:00</span>   
                           <div class="movie-year">                    
-                            <span><strong>Modern Life in Rubish</strong>
+                            <span><strong>Modern Life is Rubish</strong>
                              <span class="year">(2018)</span>  
                             </span>  
                           </div>      
@@ -776,7 +777,7 @@
                       <div class="panel-body">
                         <div class="row">
                           <div class = "col-md-4 col-sm-5 col-xs-4">
-                              <a href="img/modern_life.jpg" data-fancybox="images" data-caption="Brought together by their shared love of music, ten years on Liam and Natalie are at breaking point. In their case opposites attract but don't necessarily work long-term. Making the difficult decision to separate, they must split their prized music library. But the soundtrack that defined their relationship keeps pulling them back together."><img src="img/modern_life.jpg" class="img-responsive "alt="Modern Life"></a>          
+                              <a href="img/modern_life.jpg" data-fancybox="images" data-caption="Brought together by their shared love of music, ten years on Liam and Natalie are at breaking point. In their case opposites attract but don't necessarily work long-term. Making the difficult decision to separate, they must split their prized music library. But the soundtrack that defined their relationship keeps pulling them back together."><img src="img/modern_life.jpg" class="img-responsive "alt="Modern Life is Rubbish"></a>          
                           </div>                       
                           <div class = "col-md-8 col-sm-7 col-xs-8">
                             <div class="row">
@@ -900,39 +901,41 @@
  </main>   
 
  <footer class="navbar-inverse">  
-  <div class="container-fluid ft-top">
-    <div class="row news">
-      <div class="col-sm-8">
-        <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
-        method="POST"> 
-          <h4>Get Festival Offers and News</h4>                                            
-          <div class="input-group input-group-lg">                     
-          <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="submit" value="Send">
-            Sign Up
-            </button>
-          </div>
-          </div>                  
-        </form>
-      </div>
-      <div class="col-sm-4">
-        <div class="brooklyn-links">
-          <h4>Find out more</h4>
-            <ul>
-              <li>
-              <a href="https://www.brooklynpaper.com/">Brooklyn's News <i class="fas fa-angle-right"></i>
-              </a>
-              </li>
-            <li>
-              <a href="https://www.brooklynbridgepark.org/">Brooklyin Bridge Park <i class="fas fa-angle-right"></i>
-              </a>
-            </li>               
-          </ul>
+  <div class=" ft-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <form class="newsletter-form" action="https://formspree.io/gordana@nikolic.si"
+          method="POST"> 
+            <h4>Get Festival Offers and News</h4>                                            
+            <div class="input-group input-group-lg">                     
+            <input type="email" name="_replyto" class="form-control" placeholder="Enter your email addres">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit" value="Send">
+              Sign Up
+              </button>
+            </div>
+            </div>                  
+          </form>
         </div>
-      </div>
+        <div class="col-sm-4">
+          <div class="brooklyn-links">
+            <h4>Find out more</h4>
+              <ul>
+                <li>
+                <a href="https://www.brooklynpaper.com/">Brooklyn's News <i class="fas fa-angle-right"></i>
+                </a>
+                </li>
+              <li>
+                <a href="https://www.brooklynbridgepark.org/">Brooklyin Bridge Park <i class="fas fa-angle-right"></i>
+                </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+      </div> 
     </div> 
-  </div>  
+  </div>
   <div class="container ft-bottom">      
     <div class="row">
       <div class="col-xs-12">           
@@ -962,8 +965,9 @@
           <p class="copyright">&copy; 2018 Brooklyn Outdoor Film Festival.</p>
         </div>
       </div>
-  </div>     
-  </footer>
+  </div>
+    
+</footer>
     
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
