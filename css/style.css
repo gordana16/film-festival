@@ -697,7 +697,9 @@ input[type=checkbox] {
         margin-bottom: 5px;
         font-size: 12px;  
     }
-
+    .carousel .carousel-control > i{
+        font-size: 28px;
+    }
     /*schedule page*/
     #schedule .movie-year{       
         left: 37%;              
